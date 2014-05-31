@@ -1,19 +1,36 @@
-var bcrypt = require('bcryptjs')
 
-exports.genSalt = function(rounds, seedLength) {
-  return function(done) {
-    bcrypt.genSalt(rounds, seedLength, done)
-  }
-}
+/**
+ * Module dependencies
+ */
 
-exports.hash = function(s, salt) {
-  return function(done) {
-    bcrypt.hash(s, salt, done)
-  }
-}
+var thunkify = require ('thunkify');
 
-exports.compare = function(s, hash) {
-  return function(done) {
-    bcrypt.compare(s, hash, done)
-  }
+/**
+ * Methods to wrap
+ */
+
+var methods = [
+	'genSalt',
+	'hash',
+	'compare'
+];
+
+/**
+ * Wrap `bcrypt` 
+ *
+ * @param {BCrypt} native or pure js version
+ * @return {WrappedBCrypt}
+ * @api public
+ */
+
+module.exports = function (bcrypt) {
+	var obj = {};
+	for (var k in bcrypt) {
+		if (methods.indexOf(k) >= 0) {
+			obj[k] = thunkify(bcrypt[k]);
+		} else {
+			obj[k] = bcrypt[k];
+		}
+	}
+	return obj;
 }

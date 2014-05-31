@@ -1,6 +1,6 @@
 {
   "name": "co-bcrypt",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "author": "Markus Ast <npm.m@rkusa.st>",
   "description": "bcryptjs wrapper for co",
   "keywords": [
@@ -16,9 +16,11 @@
   ],
   "homepage": "https://github.com/rkusa/co-bcrypt",
   "dependencies": {
-    "bcryptjs": "^0.7.12"
+    "thunkify": "^2.1.1"
   },
-  "bugs": "https://github.com/rkusa/co-bcrypt/issues",
+  "bugs": {
+    "url": "https://github.com/rkusa/co-bcrypt/issues"
+  },
   "repository": {
     "type": "git",
     "url": "git://github.com/rkusa/co-bcrypt.git"
@@ -26,5 +28,16 @@
   "license": "MIT",
   "engines": {
     "node": ">=0.11.2"
+  },
+  "devDependencies": {
+    "bcryptjs": "^0.7.12",
+    "co": "^3.0.6",
+    "mocha": "^1.20.0",
+    "nan-bcrypt": "^0.7.9",
+    "should": "^4.0.0"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "make test"
   }
 }
