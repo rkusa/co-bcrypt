@@ -2,8 +2,9 @@
 
 [bcrypt](https://github.com/ncb000gt/node.bcrypt.js/) wrapper for [co](https://github.com/visionmedia/co)
 
-Since **1.0.0**, `co-bcrypt` is using [`bcrypt`](https://github.com/ncb000gt/node.bcrypt.js/) instead of [`bcryptjs`](https://github.com/dcodeIO/bcrypt.js) (a wrapper for latter: [`co-bcryptjs`](https://github.com/rkusa/co-bcryptjs)).
-.
+[![NPM][npm]](https://npmjs.org/package/co-bcrypt)
+
+Since **1.0.0**, `co-bcrypt` is using [`bcrypt`](https://github.com/ncb000gt/node.bcrypt.js/) instead of [`bcryptjs`](https://github.com/dcodeIO/bcrypt.js) (a wrapper for bcryptjs: [`co-bcryptjs`](https://github.com/rkusa/co-bcryptjs)).
 
 ## Usage
 
@@ -25,3 +26,5 @@ Permission is hereby granted, free of charge, to any person obtaining a copy of 
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+[npm]: http://img.shields.io/npm/v/co-bcrypt.svg?style=flat-square
