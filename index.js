@@ -1,4 +1,4 @@
-var bcrypt = require('bcryptjs')
+var bcrypt = require('bcrypt')
 
 exports.genSalt = function(rounds, seedLength) {
   return function(done) {

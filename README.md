@@ -1,6 +1,20 @@
 # co-bcrypt
 
-[bcryptjs](https://github.com/dcodeIO/bcrypt.js) wrapper for [co](https://github.com/visionmedia/co)
+[bcrypt](https://github.com/ncb000gt/node.bcrypt.js/) wrapper for [co](https://github.com/visionmedia/co)
+
+Since **1.0.0**, `co-bcrypt` is using [`bcrypt`](https://github.com/ncb000gt/node.bcrypt.js/) instead of [`bcryptjs`](https://github.com/dcodeIO/bcrypt.js) (a wrapper for latter: [`co-bcryptjs`](https://github.com/rkusa/co-bcryptjs)).
+.
+
+## Usage
+
+```js
+var salt = yield bcrypt.genSalt(10)
+var hash = yield bcrypt.hash('B4c0/\/', salt)
+
+if (yield.compare('B4c0/\/', hash)) {
+  ...
+}
+```
 
 ## MIT License
 
