@@ -12,7 +12,7 @@ Since **1.0.0**, `co-bcrypt` is using [`bcrypt`](https://github.com/ncb000gt/nod
 var salt = yield bcrypt.genSalt(10)
 var hash = yield bcrypt.hash('B4c0/\/', salt)
 
-if (yield.compare('B4c0/\/', hash)) {
+if (yield bcrypt.compare('B4c0/\/', hash)) {
   ...
 }
 ```
